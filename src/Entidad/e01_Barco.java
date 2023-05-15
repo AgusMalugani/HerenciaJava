@@ -8,12 +8,12 @@ package Entidad;
 import Interfaces.e01_Alquiler;
 import java.util.Scanner;
 
-
-
 /**
-  Barco se caracteriza por: su matrícula, su eslora en metros y año de fabricación.
+ * Barco se caracteriza por: su matrícula, su eslora en metros y año de
+ * fabricación.
  */
-public class e01_Barco{
+public class e01_Barco {
+
     protected String matricula;
     protected int eslora;
     protected int añoFabr;
@@ -52,33 +52,20 @@ public class e01_Barco{
         this.añoFabr = añoFabr;
     }
 
-    
-    public void crearBarco(){
+    public void crearBarco() {
         System.out.println("--- Creacion Barco ---");
-        //String matricula, int eslora, int añoFabr
         System.out.println("Ingrese la matricula");
-       this.matricula = leer.next();
+        this.matricula = leer.next();
         System.out.println("Ingrese su eslora");
         this.eslora = leer.nextInt();
         System.out.println("Ingrese el año de fabricacion");
-        this.añoFabr= leer.nextInt();
-        
-       // return new e01_Barco(matricula, eslora, añoFabr);
-        
+        this.añoFabr = leer.nextInt();
+
     }
 
     @Override
     public String toString() {
         return "e01_Barco{" + "matricula=" + matricula + ", eslora=" + eslora + ", a\u00f1oFabr=" + añoFabr + '}';
     }
-    
-    
-    
-    }
-    
-    
-    
-    
-    
-    
 
+}

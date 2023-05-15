@@ -33,9 +33,71 @@ precio final de su alquiler.
  */
 package herencia;
 
+import Entidad.e01_Alquiler;
+import Entidad.e01_Barco;
+import Entidad.e01_BarcoMotor;
+import Entidad.e01_Velero;
+import Entidad.e01_Yate;
+import Servicio.e01_AlquilerServicio;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.Scanner;
+
 public class e01 {
+
     public static void main(String[] args) {
-        // TODO code application logic here
+        Scanner leer = new Scanner(System.in);
+
+        e01_Velero velero = new e01_Velero();
+        e01_BarcoMotor barcoMotor = new e01_BarcoMotor();
+        e01_Yate yate = new e01_Yate();
+
+        velero.crearBarco();
+
+        barcoMotor.crearBarco();
+
+        yate.crearBarco();
+
+        // falta crear una lista donde agregue los barcos y despues le asigno a cada alquiler un barco.
+        ArrayList<e01_Barco> barcoList = new ArrayList<e01_Barco>();
+        barcoList.add(velero);
+        barcoList.add(barcoMotor);
+        barcoList.add(yate);
+
+        e01_AlquilerServicio as = new e01_AlquilerServicio();
+
+        ArrayList<e01_Alquiler> listaAlquileres = new ArrayList<e01_Alquiler>();
+        /*
+        for (int i = 0; i < barcoList.size(); i++) {
+            System.out.println("La cantidad de barcos para alquilar son: " + barcoList.size());
+        }
+         */
+        int cont = 0;
+
+        for (e01_Barco aux : barcoList) {
+            System.out.println("barco n° " + cont + " " + aux);  // veo los barcos disponibles
+            cont++;
+        }
+
+        Iterator<e01_Barco> itBarco = barcoList.iterator();
+        while (itBarco.hasNext()) {
+            e01_Barco auxBarco = itBarco.next();
+            e01_Alquiler alquiler = as.inicioAlquiler(auxBarco);
+            listaAlquileres.add(alquiler);
+            System.out.println("----------");
+        }
+
+        for (e01_Alquiler listaAlquilere : listaAlquileres) {
+            System.out.println(listaAlquilere);
+
+        }
+
+
+        /*
+        falta crear un metodo para que se generen barcos hasta que decida que se generen, despues ya esta creado que el alquiler se cree para cada barco,}
+        pero falta opnerle una condicion de si quiere seguir alquilando barcos o prefiere dejar los barcos restantes.
+        
+         */
     }
-    
+
 }
