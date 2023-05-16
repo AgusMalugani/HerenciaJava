@@ -22,14 +22,18 @@ public abstract class ej1_Animal {
         this.edad = edad;
         this.raza = raza;
     }
+
     
     
     
+    public abstract void Alimentarse();
+    }
     
-    public abstract void Alimentarse(); 
+    
+    
         
     
     
     
     
-}
+

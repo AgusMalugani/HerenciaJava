@@ -50,8 +50,8 @@ public abstract class e02_Edificio {
         this.largo = largo;
     }
     
-    public abstract void calcularSuperficie();
-    public abstract void calcularVolumen();
+    public abstract int calcularSuperficie();
+    public abstract int calcularVolumen();
         
     
     

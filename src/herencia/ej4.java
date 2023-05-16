@@ -1,4 +1,5 @@
 /*
+<<<<<<< HEAD
 Se plantea desarrollar un programa que nos permita calcular el área y el perímetro de formas
 geométricas, en este caso un círculo y un rectángulo. Ya que este cálculo se va a repetir en las
 dos formas geométricas, 
@@ -27,5 +28,5 @@ public class ej4 {
         rectangulo.area();
         rectangulo.perimetro();
     }
-    
 }
+

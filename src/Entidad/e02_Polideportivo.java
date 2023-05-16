@@ -35,6 +35,37 @@ public class e02_Polideportivo extends e02_Edificio {
     }
 
     @Override
+    public int getAncho() {
+        return ancho;
+    }
+
+    @Override
+    public void setAncho(int ancho) {
+        this.ancho = ancho;
+    }
+
+    @Override
+    public int getAlto() {
+        return alto;
+    }
+
+    @Override
+    public void setAlto(int alto) {
+        this.alto = alto;
+    }
+
+    @Override
+    public int getLargo() {
+        return largo;
+    }
+
+    @Override
+    public void setLargo(int largo) {
+        this.largo = largo;
+    }
+    
+
+    @Override
     public String toString() {
         return "e02_Polideportivo{" + "nombre=" + nombre + ", techo=" + techo + '}';
     }
@@ -44,13 +75,41 @@ public class e02_Polideportivo extends e02_Edificio {
     
     
     @Override
-    public void calcularSuperficie() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public int calcularSuperficie() {
+//largo x ancho
+
+int superficie = getLargo() * getAncho();
+return superficie;
+
     }
 
     @Override
-    public void calcularVolumen() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public int calcularVolumen() {
+//multiplicación de la altura por el ancho y por el largo.
+
+        int volumen = getAlto()*getAncho()*getLargo();
+return volumen;
+    }
+    
+    public e02_Polideportivo crearPoli(){
+        System.out.println("Ingrese el nombre del Polideportivo");
+        setNombre("POLIDEPORTIVOOO");
+        System.out.println("Es techado ? s/n");
+        /*
+        String resp = leer.next();
+        if(resp.equalsIgnoreCase("s")){
+        setTecho(true);
+        }else { setTecho(False);}
+        */
+        setTecho(true);
+        
+       System.out.println("Ingrese el Largo del edificio");
+        setLargo(50); // desp cambiarlo con scanner
+System.out.println("Ingrese el ancho del edificio");
+        setAncho(100);
+        System.out.println("Ingrese la altura del edificio");
+        setAlto(80);
+        return new e02_Polideportivo(nombre, techo, ancho, alto, largo);
     }
     
     
