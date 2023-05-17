@@ -1,5 +1,8 @@
 
 package Entidad;
+
+import java.util.Scanner;
+
 /*
  Clase Polideportivo con su nombre y tipo de instalación que puede ser Techado o
 Abierto, esta clase implementará los dos métodos abstractos y los atributos del padre.
@@ -8,7 +11,8 @@ Abierto, esta clase implementará los dos métodos abstractos y los atributos de
 public class e02_Polideportivo extends e02_Edificio {
     private String nombre;
     private boolean techo; // si tiene es true
-
+Scanner leer = new Scanner(System.in);
+    
     public e02_Polideportivo() {
     }
 
@@ -67,7 +71,7 @@ public class e02_Polideportivo extends e02_Edificio {
 
     @Override
     public String toString() {
-        return "e02_Polideportivo{" + "nombre=" + nombre + ", techo=" + techo + '}';
+        return super.toString() + "e02_Polideportivo{" + "nombre=" + nombre + ", techo=" + techo + '}';
     }
 
     
@@ -92,23 +96,23 @@ return volumen;
     }
     
     public e02_Polideportivo crearPoli(){
+        System.out.println("----- POLIDEPORTIVO -----");
         System.out.println("Ingrese el nombre del Polideportivo");
-        setNombre("POLIDEPORTIVOOO");
+        setNombre(leer.next());
         System.out.println("Es techado ? s/n");
-        /*
+        
         String resp = leer.next();
         if(resp.equalsIgnoreCase("s")){
         setTecho(true);
-        }else { setTecho(False);}
-        */
-        setTecho(true);
+        }else { setTecho(false);}
+        
         
        System.out.println("Ingrese el Largo del edificio");
-        setLargo(50); // desp cambiarlo con scanner
+        setLargo(leer.nextInt()); // desp cambiarlo con scanner
 System.out.println("Ingrese el ancho del edificio");
-        setAncho(100);
+        setAncho(leer.nextInt());
         System.out.println("Ingrese la altura del edificio");
-        setAlto(80);
+        setAlto(leer.nextInt());
         return new e02_Polideportivo(nombre, techo, ancho, alto, largo);
     }
     

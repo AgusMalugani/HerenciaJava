@@ -5,16 +5,20 @@
  */
 package Entidad;
 
-/**
- • Clase EdificioDeOficinas con sus atributos número de oficinas, cantidad de personas
-por oficina y número de pisos. Esta clase implementará los dos métodos abstractos y
-los atributos del padre.
+import java.util.Scanner;
 
+/**
+ * • Clase EdificioDeOficinas con sus atributos número de oficinas, cantidad de
+ * personas por oficina y número de pisos. Esta clase implementará los dos
+ * métodos abstractos y los atributos del padre.
+ *
  */
 public class e02_EdificioDeOficina extends e02_Edificio {
+
     private int numOficinas;
     private int personasPorOficina;
     private int numPisos;
+    Scanner leer = new Scanner(System.in);
 
     public e02_EdificioDeOficina() {
     }
@@ -80,50 +84,59 @@ public class e02_EdificioDeOficina extends e02_Edificio {
         this.largo = largo;
     }
 
-    
-    
     @Override
     public String toString() {
-        return "e02_EdificioDeOficina{" + "numOficinas=" + numOficinas + ", personasPorOficina=" + personasPorOficina + ", numPisos=" + numPisos + '}';
+        return super.toString() + "e02_EdificioDeOficina{" + "numOficinas=" + numOficinas + ", personasPorOficina=" + personasPorOficina + ", numPisos=" + numPisos + '}';
     }
-    
-    
-    
-    
 
     @Override
     public int calcularSuperficie() {
 //largo x ancho
 
-int superficie = getLargo() * getAncho();
-return superficie;
+        int superficie = getLargo() * getAncho();
+        return superficie;
     }
 
     @Override
     public int calcularVolumen() {
 //multiplicación de la altura por el ancho y por el largo.
 
-        int volumen = getAlto()*getAncho()*getLargo();
-return volumen;
+        int volumen = getAlto() * getAncho() * getLargo();
+        return volumen;
     }
-    
-        public e02_Polideportivo crearPoli(){
-    /*
+
+    public e02_EdificioDeOficina crearOficina() {
+        /*
+            
               private int numOficinas;
     private int personasPorOficina;
     private int numPisos;
-            */
-        
-       System.out.println("Ingrese el Largo del edificio");
-        setLargo(50); // desp cambiarlo con scanner
-System.out.println("Ingrese el ancho del edificio");
-        setAncho(100);
+         */
+        System.out.println("----- Edificio con oficinas -----");
+        System.out.println("Ingrese el Largo del edificio");
+        setLargo(leer.nextInt()); // desp cambiarlo con scanner
+        System.out.println("Ingrese el ancho del edificio");
+        setAncho(leer.nextInt());
         System.out.println("Ingrese la altura del edificio");
-        setAlto(80);
-        return new e02_Polideportivo(nombre, techo, ancho, alto, largo);
+        setAlto(leer.nextInt());
+        System.out.println("Ingrese el numero de pisos, en cada piso hay una oficina");
+        setNumPisos(leer.nextInt());
+        setNumOficinas(getNumPisos());
+        System.out.println("Cuantas personas entran en 1 piso ?");
+        setPersonasPorOficina(leer.nextInt());// cantidad por piso
+        // int cantidadTotal = cantPersonas();
+        return new e02_EdificioDeOficina(numOficinas, personasPorOficina, numPisos, ancho, alto, largo);
     }
-    
-    
-    
-    
+
+    /*
+        Crear el método cantPersonas(), que muestre
+cuantas personas entrarían en un piso y cuantas en todo el edificio.
+     */
+    public int cantPersonas() {
+
+        int cantidadTotalPersonas = getPersonasPorOficina() * getNumPisos(); // cantidad en todo el edificio
+        System.out.println("En el edificio entra un total de : " + cantidadTotalPersonas + " personas");
+        return cantidadTotalPersonas;
+    }
+
 }

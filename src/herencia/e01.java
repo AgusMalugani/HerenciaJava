@@ -105,6 +105,7 @@ public class e01 {
                     listaAlquileres.add(alquiler); // lo agrego a la lista de barcosAlquilados
                     // saco al barco de la lista de opciones
                     itBarco.remove();
+                    
                 }
                 cont++;
                 System.out.println("----------");
