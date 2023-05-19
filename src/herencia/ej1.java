@@ -7,10 +7,10 @@ siguiente:
  */
 package herencia;
 
-import Entidad.ej1_Animal;
-import Entidad.ej1_Caballo;
-import Entidad.ej1_Gato;
-import Entidad.ej1_Perro;
+import Entidad.ej1.ej1_Animal;
+import Entidad.ej1.ej1_Caballo;
+import Entidad.ej1.ej1_Gato;
+import Entidad.ej1.ej1_Perro;
 import java.util.ArrayList;
 
 public class ej1 {

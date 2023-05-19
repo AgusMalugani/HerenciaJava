@@ -33,11 +33,11 @@ precio final de su alquiler.
  */
 package herencia;
 
-import Entidad.e01_Alquiler;
-import Entidad.e01_Barco;
-import Entidad.e01_BarcoMotor;
-import Entidad.e01_Velero;
-import Entidad.e01_Yate;
+import Entidad.extra01.e01_Alquiler;
+import Entidad.extra01.e01_Barco;
+import Entidad.extra01.e01_BarcoMotor;
+import Entidad.extra01.e01_Velero;
+import Entidad.extra01.e01_Yate;
 import Servicio.e01_AlquilerServicio;
 import java.util.ArrayList;
 import java.util.Iterator;

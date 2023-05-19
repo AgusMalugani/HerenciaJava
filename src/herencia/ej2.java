@@ -5,9 +5,9 @@
  */
 package herencia;
 
-import Entidad.ej2_Electrodomestico;
-import Entidad.ej2_Lavadora;
-import Entidad.ej2_Televisor;
+import Entidad.ej2.ej2_Electrodomestico;
+import Entidad.ej2.ej2_Lavadora;
+import Entidad.ej2.ej2_Televisor;
 import java.util.ArrayList;
 import java.util.Scanner;
 

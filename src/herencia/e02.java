@@ -29,9 +29,9 @@ cantPersonas() y mostrar los resultados de cada edificio de oficinas.
  */
 package herencia;
 
-import Entidad.e02_Edificio;
-import Entidad.e02_EdificioDeOficina;
-import Entidad.e02_Polideportivo;
+import Entidad.extra02.e02_Edificio;
+import Entidad.extra02.e02_EdificioDeOficina;
+import Entidad.extra02.e02_Polideportivo;
 import java.util.ArrayList;
 import java.util.Scanner;
 

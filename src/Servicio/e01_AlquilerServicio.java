@@ -1,7 +1,7 @@
 package Servicio;
 
-import Entidad.e01_Alquiler;
-import Entidad.e01_Barco;
+import Entidad.extra01.e01_Alquiler;
+import Entidad.extra01.e01_Barco;
 import java.util.ArrayList;
 
 import java.util.Date;

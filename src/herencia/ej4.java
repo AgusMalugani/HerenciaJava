@@ -13,8 +13,8 @@ resultado final.
  */
 package herencia;
 
-import Entidad.ej4_Circulo;
-import Entidad.ej4_Rectangulo;
+import Entidad.ej4.ej4_Circulo;
+import Entidad.ej4.ej4_Rectangulo;
 
 public class ej4 {
 
